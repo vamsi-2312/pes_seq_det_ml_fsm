@@ -1,6 +1,13 @@
 # Sequence Detector Using Mealy FSM
 ## Top module name : pes_seq_det_ml_fsm
 
+**In this repository we are going to see the flow from design to tapeout.**<br>
+We have divided it into 3 parts.
+1. Synthesis and GLS.
+2. Physical Design.
+3. GDS Tapeout.
+
+# Synthesis and GLS
 Open terminal
 ```
 cd ~/sky130RTLDesignAndSynthesisWorkshop/verilog_files
@@ -58,3 +65,6 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
 ```
 gtkwave sqnsdet_tb.vcd
 ```
+# Physical Design
+
+# GDS Tapeout
