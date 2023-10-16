@@ -57,7 +57,7 @@ write_verilog -noattr Seq_Detector_ML_FSM_netlist.v
 exit
 ```
 ```
-iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v Seq_Detector_ML_FSM_netlist.v Seq_detector_ML_FSM.v
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v Seq_Detector_ML_FSM_netlist.v Seq_Detector_ML_FSM_tb.v
 ```
 ```
 ./a.out
