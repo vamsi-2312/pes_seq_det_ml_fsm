@@ -1,7 +1,7 @@
 module pes_seq_det_ml_fsm_tb;
 reg sequence_in,clock,reset;
 wire detector_out;
-iiitb_SDM m1(sequence_in,clock,reset,detector_out);
+pes_seq_det_ml_fsm m1(sequence_in,clock,reset,detector_out);
 initial
 begin
 $dumpfile("sqnsdet_tb.vcd");
