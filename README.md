@@ -17,6 +17,8 @@ We have divided it into 3 parts.
 
 ![Screenshot from 2023-10-21 08-30-55](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/b85db39a-87eb-4594-9c05-c4606c6885c5)
 
+### We are Detecting the pattern 101011.<br>
+
 ## Code for Sequence Detector (Design)
 ```
 module pes_seq_det_ml_fsm(sequence_in,clock,reset,detector_out);
