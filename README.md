@@ -146,6 +146,10 @@ endmodule
 
 
 # Synthesis and GLS
+
+First we will be performing Synthesis of the Design and Test Bench just using "Iverilog".<br>
+Then we will compare with the results obtained by "YOSYS" and "GLS".<br>
+
 Open terminal
 ```
 cd ~/sky130RTLDesignAndSynthesisWorkshop/verilog_files
@@ -163,22 +167,27 @@ gtkwave sqnsdet_tb.vcd
 
 ![1](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/fe72c7e4-61fa-47c8-885f-3bf2cf00711d)
 
+Next, Let's invoke YOSYS.<br>
 ```
 yosys
 ```
+Read the Library file.<br>
 ```
 read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
 ```
+Read the Design File.<br>
 ```
 read_verilog Seq_detector_ML_FSM.v
 ```
 ![3](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/04dbea6b-13e1-4dd9-b956-769c9940f588)
 
+Perform Synthesis of the Design File(here we have given the top module name as the Design module name).<br>
 ```
 synth -top pes_seq_det_ml_fsm
 ```
 ![4](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/ef9c1a11-62f8-4304-8d22-c13c92a94af3)
 
+The we need to map the D Flip-Flops.<br>
 ```
 dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
@@ -187,19 +196,23 @@ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 ![after abc](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/61204c6e-9edb-4895-bdad-5507add7fee5)
 
+To see the Netlist.<br>
 ```
 show
 ```
 ![2](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/f8088dbf-8026-4b5d-a6bc-a33b305e788a)
 
+Writing the netlist into Seq_Detector_ML_FSM_netlist.v<br>
 ```
 write_verilog -noattr Seq_Detector_ML_FSM_netlist.v
 ```
 ![3](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/5e441837-a644-4ed0-9cd1-08b36906d48c)
 
+Come outside Yosys.<br>
 ```
 exit
 ```
+Now let's perform GLS using the netlist generated from the yosys.<br>
 ```
 iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v Seq_Detector_ML_FSM_netlist.v Seq_Detector_ML_FSM_tb.v
 ```
@@ -211,6 +224,7 @@ gtkwave sqnsdet_tb.vcd
 ```
 ![4](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/3c7300dc-c351-4ecd-b1ae-91ebae311d0c)
 
+This is the image from the GLS.<br>
 ![5](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/3f584b06-0f44-4f67-8dda-f89b61badd3c)
 
 # Physical Design
