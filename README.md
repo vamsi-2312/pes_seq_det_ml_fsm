@@ -8,12 +8,22 @@ We have divided it into 3 parts.
 3. GDS Tapeout.
 
 ## What is Sequence Detector?
-#### **A sequence detector is a digital circuit or algorithm that identifies specific patterns or sequences within a data stream. It takes an input stream, defines a target sequence, and produces an output when the input matches the defined pattern. Sequence detectors use sequential logic to process and recognize various sequences, serving applications like data communication error detection, barcode scanning, and speech recognition.**<br>
+A sequence detector is a digital circuit or algorithm that serves the purpose of recognizing specific sequences within an input stream. These sequences could be composed of binary digits, symbols, or events and can be continuous or discrete, depending on the application.
+
+Key elements of sequence detectors include:
+
+Sequence Specification: Designers specify the particular sequence or pattern they want the detector to identify. This sequence is defined through a set of rules, conditions, or a pattern description.
+
+Output: When the input stream matches the specified sequence, the sequence detector generates an output signal or triggers a predefined action, indicating that the desired pattern has been found.
+
+Sequential Logic: Sequence detectors employ sequential logic circuits or algorithms to keep track of the current state and transition as new symbols in the input stream are processed. This enables the detector to identify sequences of varying lengths and complexity.
+
+Sequence detectors find applications in various fields, including data communication for error detection and correction, barcode scanning for retail and logistics, speech recognition in voice command systems, and more. The complexity and design of a sequence detector depend on the specific requirements of the task and the nature of the input data it is meant to process.<br>
 
 ### We are using Mealy FSM to implement our Sequence Detector, we can also implement it using Moore FSM.
 
 ### Mealy FSM
-#### A Mealy Finite State Machine (FSM) is a type of sequential digital circuit where the output depends not only on the current state but also on the input. It transitions between states based on input and produces output simultaneously. Mealy FSMs are often used in applications where real-time responses are required.<br>
+A Mealy Finite State Machine (FSM) is a digital circuit known for its real-time responsiveness. It differs from the more common Moore FSM by generating outputs not only based on the current state but also on the immediate input. This means the outputs can change in real-time as the machine transitions between states, making it suitable for applications where immediate, input-sensitive responses are essential. Mealy FSMs find applications in various areas such as control systems and communication protocols, where dynamic and context-aware behavior is needed for efficient and adaptive operation.<br>
 
 ![Screenshot from 2023-10-21 08-30-55](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/b85db39a-87eb-4594-9c05-c4606c6885c5)
 
