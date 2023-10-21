@@ -228,7 +228,7 @@ This is the image from the GLS.<br>
 ![5](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/3f584b06-0f44-4f67-8dda-f89b61badd3c)
 
 Comparing the Output before and after GLS.<br>
-Left - Before GLS
+Left - Before GLS<br>
 Right - After GLS
 ![Screenshot from 2023-10-21 08-53-26](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/286213f9-cbce-4349-99ec-aff2299560b1)
 
