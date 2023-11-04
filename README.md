@@ -405,6 +405,7 @@ cd magic
 ./configure
 make  
 make install
+sudo apt install magic
 ```
 
 ## Flow
