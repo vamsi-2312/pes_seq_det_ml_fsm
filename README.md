@@ -598,6 +598,9 @@ Routing Output:<br>
 ![Screenshot from 2023-11-04 17-37-41](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/3f3d8067-3611-4e74-97a2-fcfa2670699b)
 
 ## .mag file<br>
+```
+magic -T sky130A.tech pes_seq_det_ml_fsm.mag & 
+```
 ![Screenshot from 2023-11-04 17-53-48](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/6b9ea801-3f53-4c1a-b449-a6cf51632cb9)
 
 Dimesions:
