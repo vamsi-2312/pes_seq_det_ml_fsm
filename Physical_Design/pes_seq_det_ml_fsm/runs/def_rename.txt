@@ -1,0 +1,6 @@
+I have renamed the .def files as per the steps.
+
+Floorplan - pes_seq_det_ml_fsm_floorplan.def
+Placement - pes_seq_det_ml_fsm_placement.def
+CTS - pes_seq_det_ml_fsm_ct.def
+Routing - pes_seq_det_ml_fsm_routing.def
