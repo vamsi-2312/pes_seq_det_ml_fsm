@@ -547,6 +547,14 @@ run_routing
 ![13](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/5bc204e3-53cf-4905-a3f4-7118a094573e)
 
 ```
+cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/cts
+```
+```
+magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
+```
+![Screenshot from 2023-11-04 20-42-47](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/84def3d4-2504-4f83-ae92-46bacc3fe62b)
+
+```
 cd
 ```
 ```
@@ -555,8 +563,11 @@ cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/routing
 ```
 magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
 ```
-here
-cts layout 
+![Screenshot from 2023-11-04 20-43-32](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/187b85e2-8b25-4623-a5e9-7164526fa24e)
+
+![Screenshot from 2023-11-04 20-44-26](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/1bd13926-d5d2-4374-aeab-63598b01610a)
+
+Let's go to next steps.<br>
 ```
 run_magic
 ```
