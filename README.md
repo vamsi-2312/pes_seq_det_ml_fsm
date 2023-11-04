@@ -407,6 +407,7 @@ cd magic
 ./configure
 make  
 make install
+cd
 sudo apt install magic
 ```
 
@@ -423,8 +424,8 @@ Step 8 : run_magic_drc<br>
 Step 9 : run_lvs<br>
 Step 10 : run_antenna_check<br>
 
-Create config.json file and save it in this location ~/Openlane/designs/<DESIGN_NAME><br>
-(~/Openlane/designs/pes_seq_det_ml_fsm)
+Create config.json file and save it in this location ```~/Openlane/designs/(DESIGN_NAME)```
+(/Openlane/designs/pes_seq_det_ml_fsm)<br>
 
 config.json file
 ```
@@ -690,13 +691,13 @@ Statistics :<br>
 ```
 Chip area for module '\pes_seq_det_ml_fsm': 218.96<br>
 Number of cells 			  : 20<br>
-Internal Power 				  : 4.83 uW<br>
-Switching Power 			  : 3.30 uW<br>
-Leakage Power 				  : 3.00 uW<br>
-Total Power 				  : 8.13 uW<br>
+Internal Power 				  : 7.10e-05<br>
+Switching Power 			  : 1.15e-05<br>
+Leakage Power 				  : 2.40e-10<br>
+Total Power 				  : 8.24e-05<br>
 tns 					  : 0<br>
 wns 					  : 0<br>
-Design Area 				  : 74% utlization<br>
+Design Area 				  : 24% utlization<br>
 ```
 
 # GDS Tapeout
