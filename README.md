@@ -535,11 +535,8 @@ run_placement
 ```
 magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
 ```
-![11](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/f985a5b3-b009-4a6c-9665-bda87b34825f)
-
-
-![12](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/ca4fe9db-4591-4dbc-93c2-ca8cbe9a92a2)
-
+here
+placement layout
 
 let's go to the next steps
 ```
@@ -559,10 +556,8 @@ cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/routing
 ```
 magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
 ```
-![14](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/19efdd79-0c8e-4ab6-8fdf-56aef53a2ff4)
-
-![15](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/99375f9d-d8bc-4503-be7f-676ef8c79765)
-
+here
+cts layout 
 ```
 run_magic
 ```
@@ -579,6 +574,9 @@ run_lvs
 run_antenna_check
 ```
 ![16](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/045bbec4-fbfa-4d9a-b782-08c3e92772fa)
+
+Final Design
+![Screenshot from 2023-11-04 19-35-33](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/57c9a8cf-b141-4526-a749-6963e8490cbb)
 
 To view the Static Timing Analysis:<br>
 Open terminal<br>
