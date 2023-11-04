@@ -1,4 +1,4 @@
-# Sequence Detector Using Mealy FSM
+![14](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/da55864b-3941-4143-8fb9-13a804229b4b)# Sequence Detector Using Mealy FSM
 ## Top module name : pes_seq_det_ml_fsm
 
 **In this repository we are going to see the flow from design to tapeout.**<br>
@@ -245,5 +245,134 @@ Right - After GLS
 ![Screenshot from 2023-10-21 08-53-26](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/286213f9-cbce-4349-99ec-aff2299560b1)
 
 # Physical Design
+```
+cd Openlane
+```
+```
+make mount
+```
+```
+./flow.tcl -interactive
+```
+```
+package require openlane
+```
+![1](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/883c16e5-7f54-43cd-afe4-e6b11b4e043a)
+
+```
+prep -design pes_seq_det_ml_fsm -tag final
+```
+```
+run_synthesis
+```
+```
+run_floorplan
+```
+```
+run_placement
+```
+![2](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/53ef7369-e3a2-445d-92e4-3ac83a07e2b9)
+
+open new terminal
+```
+cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/placement
+```
+```
+magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
+```
+![3](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/0725564d-7cc2-4f1a-be42-32a8642cdf6e)
+
+we can observe that design is using only very small part in the entire chip.
+
+![4](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/f66260b6-4da1-41fa-87ad-243f1e41e734)
+
+now let's change the floorplan sizing from absolute to relative.
+```
+set ::env(FP_SIZING) "relative"
+```
+![5](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/0eafcb6e-2262-4700-9a77-3bf8100218eb)
+
+```
+run_floorplan
+```
+```
+run_placement
+```
+![6](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/f3468173-bb47-488a-8fdf-1b6f8ea58a89)
+
+![7](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/320a281a-893f-450d-b56b-9cfd74a6464b)
+
+we can see the dimensions of the chip is reduced.
+```
+magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
+```
+![8](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/e296fb55-3e1d-4d81-a8c4-5ecc58ea2836)
+
+Now let try to reduce the chip size even more.
+```
+set ::env(DIE_AREA) "25 25 75 75"
+```
+```
+set ::env(CORE_AREA) "30 35 70 65"
+```
+
+![9](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/b7aa0cea-5585-418a-add6-3174fcca2480)
+
+```
+run_flooplan
+```
+```
+run_placement
+```
+![10](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/2d579c4c-beb2-4473-8644-3db3213ec20d)
+
+```
+magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
+```
+![11](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/f985a5b3-b009-4a6c-9665-bda87b34825f)
+
+
+![12](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/ca4fe9db-4591-4dbc-93c2-ca8cbe9a92a2)
+
+
+let's go to the next steps
+```
+run_cts
+```
+```
+run_routing
+```
+![13](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/5bc204e3-53cf-4905-a3f4-7118a094573e)
+
+```
+cd
+```
+```
+cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/routing
+```
+```
+magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
+```
+![14](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/19efdd79-0c8e-4ab6-8fdf-56aef53a2ff4)
+
+
+![15](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/99375f9d-d8bc-4503-be7f-676ef8c79765)
+
+```
+run_magic
+```
+```
+run_magic_spice_export
+```
+```
+run_magic_drc
+```
+```
+run_lvs
+```
+```
+run_antenna_check
+```
+![16](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/045bbec4-fbfa-4d9a-b782-08c3e92772fa)
 
 # GDS Tapeout
