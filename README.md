@@ -1,4 +1,4 @@
-![14](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/da55864b-3941-4143-8fb9-13a804229b4b)# Sequence Detector Using Mealy FSM
+# Sequence Detector Using Mealy FSM
 ## Top module name : pes_seq_det_ml_fsm
 
 **In this repository we are going to see the flow from design to tapeout.**<br>
@@ -245,6 +245,150 @@ Right - After GLS
 ![Screenshot from 2023-10-21 08-53-26](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/286213f9-cbce-4349-99ec-aff2299560b1)
 
 # Physical Design
+
+Creating a new Virtual Machine.<br>
+
+#### Installing Openlane
+
+Installation of required packages
+```
+sudo apt-get update
+```
+```
+sudo apt-get upgrade
+```
+```
+sudo apt install -y build-essential python3 python3-venv python3-pip make git
+```
+Docker Installation
+```
+# Remove old installations
+sudo apt-get remove docker docker-engine docker.io containerd runc
+# Installation of requirements
+sudo apt-get update
+sudo apt-get install \
+   ca-certificates \
+   curl \
+   gnupg \
+   lsb-release
+# Add the keyrings of docker
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+# Add the package repository
+echo \
+   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+# Update the package repository
+sudo apt-get update
+
+# Install Docker
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+# Check for installation
+sudo docker run hello-world
+```
+A successful installation of Docker would have this output:
+```
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+1. The Docker client contacted the Docker daemon.
+2. The Docker daemon pulled the "hello-world" image from the Docker Hub. (amd64)
+3. The Docker daemon created a new container from that image which runs the executable that produces the output you are currently reading.
+4. The Docker daemon streamed that output to the Docker client, which sent it to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+$ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+https://hub.docker.com/
+
+For more examples and ideas, visit:
+https://docs.docker.com/get-started/
+```
+Making Docker available without root (Linux)
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo reboot # REBOOT!
+```
+Checking the Docker Installation
+```
+# After reboot
+docker run hello-world
+```
+You will get a little happy message of Hello world, once again, but this time without root.
+```
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+1. The Docker client contacted the Docker daemon.
+2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+   (amd64)
+3. The Docker daemon created a new container from that image which runs the
+   executable that produces the output you are currently reading.
+4. The Docker daemon streamed that output to the Docker client, which sent it
+   to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+$ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+https://hub.docker.com/
+
+For more examples and ideas, visit:
+https://docs.docker.com/get-started/
+```
+Checking Installation Requirements
+```
+git --version
+docker --version
+python3 --version
+python3 -m pip --version
+make --version
+python3 -m venv -h
+```
+Successful output will look like this:
+```
+git --version
+docker --version
+python3 --version
+python3 -m pip --version
+make --version
+python3 -m venv -h
+git version 2.36.1
+Docker version 20.10.16, build aa7e414fdc
+Python 3.10.5
+pip 21.0 from /usr/lib/python3.10/site-packages/pip (python 3.10)
+GNU Make 4.3
+Built for x86_64-pc-linux-gnu
+Copyright (C) 1988-2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear]
+            [--upgrade] [--without-pip] [--prompt PROMPT] [--upgrade-deps]
+            ENV_DIR [ENV_DIR ...]
+
+Creates virtual Python environments in one or more target directories.
+...
+Once an environment has been created, you may wish to activate it, e.g. by
+sourcing an activate script in its bin directory.
+```
+Download and Install OpenLane
+```
+git clone --depth 1 https://github.com/The-OpenROAD-Project/OpenLane.git
+cd OpenLane/
+make
+make test
+```
+Successful test will output the following line:
+```
+Basic test passed
+```
+
 ```
 cd Openlane
 ```
@@ -354,7 +498,6 @@ cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/routing
 magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
 ```
 ![14](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/19efdd79-0c8e-4ab6-8fdf-56aef53a2ff4)
-
 
 ![15](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/99375f9d-d8bc-4503-be7f-676ef8c79765)
 
