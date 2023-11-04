@@ -432,7 +432,7 @@ config.json file
 {
     "DESIGN_NAME": "pes_seq_det_ml_fsm",
     "VERILOG_FILES": "dir::src/pes_seq_det_ml_fsm.v",
-    "CLOCK_PORT": "clk",
+    "CLOCK_PORT": "clock",
     "CLOCK_PERIOD": 10.0,
     "DIE_AREA": "0 0 500 500",
     "FP_SIZING": "absolute",
