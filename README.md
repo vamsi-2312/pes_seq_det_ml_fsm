@@ -579,6 +579,14 @@ run_antenna_check
 ```
 ![16](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/045bbec4-fbfa-4d9a-b782-08c3e92772fa)
 
+To view the Static Timing Analysis:<br>
+Open terminal<br>
+```
+cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/logs/cts
+```
+```
+vim 40-cts_sta.log
+```
 ![Screenshot from 2023-11-04 19-29-24](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/fe7fd8b1-c568-4f68-8293-91eb8c486ff9)
 
 ![Screenshot from 2023-11-04 19-29-35](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/2fb27c5c-c487-4aaa-aeaa-13f807142649)
@@ -590,7 +598,6 @@ run_antenna_check
 ![Screenshot from 2023-11-04 19-30-01](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/c492d99b-3686-4f16-8130-5c538fb09414)
 
 ![Screenshot from 2023-11-04 19-30-08](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/f69452db-0c09-46f2-8e37-0a5d493b9b98)
-
 
 ![Screenshot from 2023-11-04 19-30-17](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/b085dfe6-fb46-4ece-b605-af1ac4c5010d)
 
@@ -633,6 +640,9 @@ CTS Output:<br>
 Routing Output:<br>
 
 ## .mag file<br>
+```
+cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/signoff
+```
 ```
 magic -T /home/vamsi/Desktop/sky130A.tech pes_seq_det_ml_fsm.mag & 
 ```
