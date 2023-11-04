@@ -410,18 +410,18 @@ make install
 sudo apt install magic
 ```
 
-## Flow
+## Physical Design Part Flow
 
-Step 1 : run_synthesis<br>
-Step 2 : run_floorplan<br>
-Step 3 : run_placement<br>
-Step 4 : run_cts<br>
-Step 5 : run_routing<br>
-Step 6 : run_magic<br>
-Step 7 : run_magic_spice_export<br>
-Step 8 : run_magic_drc<br>
-Step 9 : run_lvs<br>
-Step 10 : run_antenna_check<br>
+#### Step 1 : run_synthesis<br>
+#### Step 2 : run_floorplan<br>
+#### Step 3 : run_placement<br>
+#### Step 4 : run_cts<br>
+#### Step 5 : run_routing<br>
+#### Step 6 : run_magic<br>
+#### Step 7 : run_magic_spice_export<br>
+#### Step 8 : run_magic_drc<br>
+#### Step 9 : run_lvs<br>
+#### Step 10 : run_antenna_check<br>
 
 Create config.json file and save it in this location ~/Openlane/designs/<DESIGN_NAME><br>
 (~/Openlane/designs/pes_seq_det_ml_fsm)
