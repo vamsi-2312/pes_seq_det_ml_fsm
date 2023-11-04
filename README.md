@@ -624,37 +624,23 @@ run_antenna_check
 
 ![Screenshot from 2023-11-04 19-33-56](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/e10a8cd3-65f2-4f2c-b542-360e95146c05)
 
-
-# i
-![Screenshot from 2023-11-04 00-46-12](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/07e45323-ea39-4a5d-9b9b-1594ddd4eeaf)
-
-![Screenshot from 2023-11-04 18-20-03](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/896b78dd-f4c5-4683-a81e-705c6585ec73)
-
-![Screenshot from 2023-11-04 18-20-45](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/d72313b7-c2fe-4c75-a299-d0e469da0106)
-
 Floorplan Output:<br>
-![Screenshot from 2023-11-04 17-32-27](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/1b95c338-c3ff-487b-9a8c-c05513368bcd)
 
 Placement Output:<br>
-![Screenshot from 2023-11-04 17-33-36](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/333daf80-3082-4b86-a5dc-8196c57452fe)
 
 CTS Output:<br>
-![Screenshot from 2023-11-04 17-36-54](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/c0ded6ad-e2cc-4dc7-a511-f0e26ada1de5)
 
 Routing Output:<br>
-![Screenshot from 2023-11-04 17-37-41](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/3f3d8067-3611-4e74-97a2-fcfa2670699b)
 
 ## .mag file<br>
 ```
-magic -T sky130A.tech pes_seq_det_ml_fsm.mag & 
+magic -T /home/vamsi/Desktop/sky130A.tech pes_seq_det_ml_fsm.mag & 
 ```
-![Screenshot from 2023-11-04 17-53-48](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/6b9ea801-3f53-4c1a-b449-a6cf51632cb9)
 
 Dimesions:
 ```
 box #in magic terminal
 ```
-![Screenshot from 2023-11-04 18-15-43](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/39a1bdd0-ea90-4ca6-b841-ae3dfa8e430e)
 
 Statistics :<br>
 ```
