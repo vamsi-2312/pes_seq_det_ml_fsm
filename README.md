@@ -421,6 +421,29 @@ Step 8 : run_magic_drc<br>
 Step 9 : run_lvs<br>
 Step 10 : run_antenna_check<br>
 
+Create config.json file and save it in this location ~/Openlane/designs/<DESIGN_NAME><br>
+(~/Openlane/designs/pes_seq_det_ml_fsm)
+
+config.json file
+```
+{
+    "DESIGN_NAME": "pes_seq_det_ml_fsm",
+    "VERILOG_FILES": "dir::src/pes_seq_det_ml_fsm.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+    "DIE_AREA": "0 0 500 500",
+    "FP_SIZING": "absolute",
+    "FP_PDN_VPITCH": 25,
+    "FP_PDN_HPITCH": 25,
+    "FP_PDN_VOFFSET": 5,
+    "FP_PDN_HOFFSET": 5,
+    "DESIGN_IS_CORE": true
+}
+```
+also create a src folder inside the same location and add the design_file(pes_seq_det_ml_fsm.v)<br>
+
+![Screenshot from 2023-11-04 18-46-48](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/8a85a548-25aa-49cf-ad4b-68e661c65534)
+
 ```
 cd Openlane
 ```
@@ -495,7 +518,7 @@ set ::env(CORE_AREA) "30 35 70 65"
 ![9](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/b7aa0cea-5585-418a-add6-3174fcca2480)
 
 ```
-run_flooplan
+run_floorplan
 ```
 ```
 run_placement
@@ -553,5 +576,45 @@ run_lvs
 run_antenna_check
 ```
 ![16](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/045bbec4-fbfa-4d9a-b782-08c3e92772fa)
+
+![Screenshot from 2023-11-04 00-46-12](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/07e45323-ea39-4a5d-9b9b-1594ddd4eeaf)
+
+![Screenshot from 2023-11-04 18-20-03](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/896b78dd-f4c5-4683-a81e-705c6585ec73)
+
+![Screenshot from 2023-11-04 18-20-45](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/d72313b7-c2fe-4c75-a299-d0e469da0106)
+
+Floorplan Output:<br>
+![Screenshot from 2023-11-04 17-32-27](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/1b95c338-c3ff-487b-9a8c-c05513368bcd)
+
+Placement Output:<br>
+![Screenshot from 2023-11-04 17-33-36](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/333daf80-3082-4b86-a5dc-8196c57452fe)
+
+CTS Output:<br>
+![Screenshot from 2023-11-04 17-36-54](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/c0ded6ad-e2cc-4dc7-a511-f0e26ada1de5)
+
+Routing Output:<br>
+![Screenshot from 2023-11-04 17-37-41](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/3f3d8067-3611-4e74-97a2-fcfa2670699b)
+
+## .mag file<br>
+![Screenshot from 2023-11-04 17-53-48](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/6b9ea801-3f53-4c1a-b449-a6cf51632cb9)
+
+Dimesions:
+```
+box #in magic terminal
+```
+![Screenshot from 2023-11-04 18-15-43](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/39a1bdd0-ea90-4ca6-b841-ae3dfa8e430e)
+
+Statistics :<br>
+```
+Chip area for module '\pes_seq_det_ml_fsm': 218.96<br>
+Number of cells 			  : 20<br>
+Internal Power 				  : 4.83 uW<br>
+Switching Power 			  : 3.30 uW<br>
+Leakage Power 				  : 3.00 uW<br>
+Total Power 				  : 8.13 uW<br>
+tns 					  : 0<br>
+wns 					  : 0<br>
+Design Area 				  : 74% utlization<br>
+```
 
 # GDS Tapeout
