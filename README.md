@@ -248,7 +248,7 @@ Right - After GLS
 
 Creating a new Virtual Machine.<br>
 
-#### Installing Openlane
+### Installing Openlane
 
 Installation of required packages
 ```
@@ -388,6 +388,37 @@ Successful test will output the following line:
 ```
 Basic test passed
 ```
+
+Installing magic
+```
+git clone https://github.com/RTimothyEdwards/magic  
+sudo apt-get install m4  
+sudo apt-get install tcl-dev  
+sudo apt-get install tk-dev  
+sudo apt-get install blt  
+sudo apt-get install freeglut3  
+sudo apt-get install libglut3  
+sudo apt-get install libglu1-mesa-dev  
+sudo apt-get install libgl1-mesa-dev  
+sudo apt-get install csh
+cd magic
+./configure
+make  
+make install
+```
+
+## Flow
+
+Step 1 : run_synthesis<br>
+Step 2 : run_floorplan<br>
+Step 3 : run_placement<br>
+Step 4 : run_cts<br>
+Step 5 : run_routing<br>
+Step 6 : run_magic<br>
+Step 7 : run_magic_spice_export<br>
+Step 8 : run_magic_drc<br>
+Step 9 : run_lvs<br>
+Step 10 : run_antenna_check<br>
 
 ```
 cd Openlane
