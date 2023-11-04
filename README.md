@@ -246,7 +246,9 @@ Right - After GLS
 
 # Physical Design
 
-Creating a new Virtual Machine.<br>
+Creating a new Virtual Machine and installing openlane in it.<br>
+
+OpenLane is an open-source digital ASIC design flow, facilitating custom chip creation. Developed by Efabless, it automates various ASIC design processes, reducing costs and barriers to entry for chip designers. With support for multiple technology nodes, it fosters collaboration and innovation in the semiconductor industry while promoting open-source hardware principles.<br>
 
 ### Installing Openlane
 
