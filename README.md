@@ -535,8 +535,7 @@ run_placement
 ```
 magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
 ```
-here
-placement layout
+![Screenshot from 2023-11-04 20-41-36](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/6d124988-d8db-4f26-bf6c-90e1da099a90)
 
 let's go to the next steps
 ```
