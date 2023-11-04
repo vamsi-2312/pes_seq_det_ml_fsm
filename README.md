@@ -632,12 +632,40 @@ vim 40-cts_sta.log
 ![Screenshot from 2023-11-04 19-33-56](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/e10a8cd3-65f2-4f2c-b542-360e95146c05)
 
 Floorplan Output:<br>
+```
+cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/floorplan
+```
+```
+magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
+```
+![Screenshot from 2023-11-04 19-49-49](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/51b66681-91e1-45c2-8079-9a6cd5c98f38)
 
 Placement Output:<br>
+```
+cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/placement
+```
+```
+magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
+```
+![Screenshot from 2023-11-04 19-52-09](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/95048dc8-0116-4d7e-bcc1-a8db95e1ca18)
 
 CTS Output:<br>
+```
+cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/cts
+```
+```
+magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
+```
+![Screenshot from 2023-11-04 19-53-01](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/d06a44ca-4765-4993-be6b-bb8b75b32eed)
 
 Routing Output:<br>
+```
+cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/routing
+```
+```
+magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
+```
+![Screenshot from 2023-11-04 19-54-17](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/f5e2ddf4-7c46-41fc-bb9f-bc8be78a66a5)
 
 ## .mag file<br>
 ```
@@ -646,11 +674,17 @@ cd ~/OpenLane/designs/pes_seq_det_ml_fsm/runs/final/results/signoff
 ```
 magic -T /home/vamsi/Desktop/sky130A.tech pes_seq_det_ml_fsm.mag & 
 ```
+![Screenshot from 2023-11-04 19-55-52](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/6d022c36-47ad-4a88-8ab3-26382662e03f)
+
+![Screenshot from 2023-11-04 19-56-20](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/3e6e0fa2-a723-465c-bfe3-9ff909119dbf)
+
+![Screenshot from 2023-11-04 20-01-42](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/96c5c60e-c5c2-455b-84a0-8551105e645d)
 
 Dimesions:
 ```
 box #in magic terminal
 ```
+![Screenshot from 2023-11-04 19-57-59](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/ca1b4d97-b8c1-4b08-be04-68e2fbb08f04)
 
 Statistics :<br>
 ```
