@@ -502,6 +502,10 @@ run_placement
 ```
 ![10](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/2d579c4c-beb2-4473-8644-3db3213ec20d)
 
+![9](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/0ca7f195-bbb8-4f1e-9bca-6731c8cd6aed)
+
+![10](https://github.com/vamsi-2312/pes_seq_det_ml_fsm/assets/142248038/2e78228c-8bf1-4f0b-be77-6d811dc73ac9)
+
 ```
 magic -T /home/vamsi/Desktop/sky130A.tech lef read ../../tmp/merged.nom.lef def read pes_seq_det_ml_fsm.def &
 ```
